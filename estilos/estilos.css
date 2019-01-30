@@ -1,0 +1,249 @@
+
+
+
+
+/* Animación */
+@keyframes rebote{
+    0% { margin-top: 150%; }
+    60% { margin-top: -5%; }
+    100% { margin-top: 0; }
+}
+
+body {
+    background: #02010a;
+    font-family: 'Dancing Script', cursive;
+}
+
+header {
+    background: #5b7989;
+    border-radius: 10px 10px 0px 0px;
+    padding: 5%;
+    display: flex;
+    align-items: center;
+    animation-name: rebote;
+    animation-duration:0.7s;
+}
+
+img {
+    box-shadow: 2px 2px #02010a;
+}
+
+ .PagActual{
+    color: #fff;
+    text-shadow: 2px 2px 0px #02010a;
+}
+
+.menu a{
+    color: #fff;
+    margin-right: 1rem;
+}
+
+.menu a:last-child{
+    margin-right: 0;
+}
+
+.contenido {
+    margin: 0 auto;
+}
+
+.imagen-central {
+    background: #82c3a6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5% 0;
+}
+
+.imagen-central > img {
+    width: 85%;
+}
+
+.imagen-secundaria{
+    background: #d5c75f;
+    display: flex;
+}
+
+.imagen-secundaria > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5% 0;
+}
+
+.imagen-secundaria > div > a {
+    text-align: center;
+    text-decoration: none;
+}
+
+.imagen-secundaria > div > a > span {
+    text-decoration: underline;
+}
+
+.imagen-secundaria > div > a > img {
+    width: 85%;
+}
+
+.imagen-secundaria > div:first-child > a > img{
+    transition: all 0.6s;
+    -webkit-transition: all 0.6s;
+}
+.imagen-secundaria > div:first-child > a > img:hover{
+    transform: rotate(10deg);
+    box-shadow: 2px 2px #82c3a6;
+}
+
+.imagen-secundaria > div:last-child > a > img{
+    transition: all 0.6s;
+    -webkit-transition: all 0.6s;
+}
+.imagen-secundaria > div:last-child > a > img:hover{
+    transform: translate(20px, -5px);
+    box-shadow: 2px 2px #82c3a6;
+}
+
+footer {
+    border-radius: 0px 0px 10px 10px;
+    background: #C6d5c5;
+    display: flex;
+    padding: 5%;
+}
+
+.contacto, .terminos, .redes, .derechos {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.contacto > h3, .terminos > h3, .redes > h3, .derechos > h3 {
+    margin: 7px 0;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+
+.galeria {
+    background: #d5c75f;
+    display: flex;
+}
+
+.galeria img:first-child{
+    filter: blur(10px);
+    -webkit-filter: blur(10px);
+}
+
+.galeria img:nth-child(2n){
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+}
+
+.galeria img:nth-child(3) {
+    filter: sepia(90%);
+    -webkit-filter: sepia(90%);
+}
+
+
+
+@media screen and (max-width: 900px) {
+
+    header{
+        flex-direction: column;
+    }
+
+    .PagActual{
+        font-size: 8.5vw;
+        text-align: center;
+    }
+
+    .menu {
+        margin-top:1rem;
+    }
+
+    .menu a{
+        font-size: 5vw;
+    }
+
+    .contenido {
+        width: 100%;
+    }
+
+    .imagen-secundaria{
+        flex-direction: column;
+    }
+
+    .imagen-secundaria > div > a > span {
+        font-size: 4.5vw;
+    }
+
+    footer {
+        flex-direction: column;
+        font-size: 4.5vw;
+    }
+
+    footer > div {
+        margin-bottom: 1.25rem;
+    }
+
+    .galeria {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .galeria img {
+        margin: 1rem 0;
+        width: 85%;
+    }
+
+}
+
+
+@media screen and (min-width: 901px) {
+
+    header {
+        text-align: left;
+        flex-direction: row;
+    }
+
+    .PagActual{
+        font-size: 2.5rem;
+        flex-grow: 1;
+    }
+
+    .menu a{
+        font-size: 1.5rem;
+    }
+
+    .contenido {
+        max-width: 900px;
+    }
+
+    .imagen-secundaria{
+        flex-direction: row;;
+    }
+
+    .imagen-secundaria > div > a > span {
+        font-size: 1.8rem;
+    }
+
+    footer {
+        flex-direction: row;
+        font-size: 1.2rem;
+    }
+
+    footer > div {
+        width: 25%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .galeria {
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 1%;
+    }
+
+    .galeria img {
+        width: 31.3%;
+        height: 375px;
+        margin: 1%;
+    }
+}
